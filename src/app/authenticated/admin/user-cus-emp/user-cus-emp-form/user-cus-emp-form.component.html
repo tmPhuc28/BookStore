@@ -1,0 +1,83 @@
+<div class="grid">
+  <div class="col-12">
+    <form [formGroup]="formUser">
+      <p-card>
+        <p-toolbar styleClass="mb-4">
+          <ng-template pTemplate="left">
+            <div class="my-2">
+              <h3 class="m-0 text-green-600">
+                {{ id ? "Edit " : "New " }}{{ "cus-emp.user" | translate }}
+              </h3>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="right">
+            <div class="my-2">
+              <a pButton pRipple icon="pi pi-arrow-right" class="no-underline p-button-rounded mr-2" href="/admin/user">
+              </a>
+            </div>
+          </ng-template>
+        </p-toolbar>
+
+        <div class="p-fluid p-formgrid grid">
+          <div class="field col-12 md:col-6">
+            <label> {{ "cus-emp.first_name" | translate }}</label>
+            <input pInputText type="text" formControlName="fistName" />
+          </div>
+          <div class="field col-12 md:col-6">
+            <label> {{ "cus-emp.last_name" | translate }}</label>
+            <input pInputText type="text" formControlName="lastName" />
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label>{{ "cus-emp.email" | translate }}</label>
+            <input pInputText type="email" formControlName="email" />
+          </div>
+          <div class="field col-12 md:col-6">
+            <label>{{ "cus-emp.phone" | translate }}</label>
+            <p-inputMask mask="999 999 9999" placeholder="086 686 8686" formControlName="phoneNumber"></p-inputMask>
+          </div>
+          <div class="field col-12 md:col-6">
+            <label>{{ "cus-emp.username" | translate }}</label>
+            <input pInputText type="text" formControlName="userName" />
+          </div>
+          <div class="field col-12 md:col-6">
+            <label>{{ "cus-emp.password" | translate }}</label>
+            <p-password formControlName="password"></p-password>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label>{{ "cus-emp.birthday" | translate }}</label>
+            <p-calendar [showIcon]="true" formControlName="dob" inputId="icon"></p-calendar>
+          </div>
+          <div class="field col-12 md:col-2 flex align-items-center mt-4">
+            <label>{{ "cus-emp.male" | translate }}</label>
+            <p-inputSwitch class="ml-3" formControlName="gender"></p-inputSwitch>
+          </div>
+          <div class="field col-12 md:col-2 flex align-items-center mt-4">
+            <label>{{ "cus-emp.role" | translate }}</label>
+            <p-inputSwitch class="ml-3" formControlName="role"></p-inputSwitch>
+          </div>
+          <div class="field col-12 md:col-2 flex align-items-center mt-4">
+            <label>{{ "cus-emp.status" | translate }}</label>
+            <p-inputSwitch class="ml-3" formControlName="status"></p-inputSwitch>
+          </div>
+          <div class="field col-12 md:col-12">
+            <label>{{ "cus-emp.address" | translate }}</label>
+            <textarea [rows]="2" [cols]="30" pInputTextarea formControlName="address"></textarea>
+          </div>
+        </div>
+
+
+        <div class="w-full flex justify-content-center">
+          <button pButton (click)="onSubmitForm()" [disabled]="formUser.invalid" pRipple label="{{ id ? 'Update' : 'Save' }}"
+                  class="p-button-primary p-button-rounded w-13rem mr-2">
+          </button>
+          <button (click)="onDelete()" pButton pRipple label="{{ id ? 'Delete'  : 'Cancel' }}"
+                  class="{{ id?'p-button-danger':'p-button-primary' }} w-13rem p-button-rounded mr-2">
+          </button>
+        </div>
+      </p-card>
+    </form>
+  </div>
+</div>
+<p-confirmDialog header="Confirmation" [rejectVisible]="false" acceptIcon=""></p-confirmDialog>

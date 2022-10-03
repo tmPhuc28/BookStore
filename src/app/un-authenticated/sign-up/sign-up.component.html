@@ -1,0 +1,122 @@
+<div class="surface-ground h-full bg-cover py-4 m-auto">
+  <div class="w-full h-full flex justify-content-center align-items-center">
+    <div class="w-6">
+      <div class="surface-card p-4 shadow-2 border-round w-full">
+        <div class="text-center mb-2">
+          <img src="./assets/Img/Logo/logo-nonbg.png" alt="Logo" height="100" class="mb-2" />
+
+          <div class="text-900 text-3xl uppercase font-bold mb-3">
+            {{ "un_authenticated.register" | translate }}
+          </div>
+        </div>
+
+        <form [formGroup]="formSignUp">
+          <div class="w-full">
+            <label for="username" class="block font-bold text-900 mb-2">
+              {{ "un_authenticated.username" | translate
+              }}<span class="text-red-500 ml-1">*</span>
+            </label>
+
+            <input id="username" formControlName="userName" type="text" [pAutoFocus]="true" pInputText
+              class="w-full mb-3" />
+          </div>
+          <div class="flex justify-content-between align-items-center">
+            <div class="w-full">
+              <label for="firstname" class="block font-bold text-900 mb-2">
+                {{ "un_authenticated.first_name" | translate
+                }}<span class="text-red-500 ml-1">*</span>
+              </label>
+              <input id="firstname" formControlName="fistName" type="text" pInputText class="w-11 mb-3" />
+            </div>
+            <div class="w-full">
+              <label for="lastname" class="block font-bold text-900 mb-2">
+                {{ "un_authenticated.last_name" | translate
+                }}<span class="text-red-500 ml-1">*</span>
+              </label>
+              <input id="lastname" formControlName="lastName" type="text" pInputText class="w-full mb-3" />
+            </div>
+          </div>
+          <div class="flex justify-content-between align-items-center">
+            <div class="w-full">
+              <label for="phone" class="block font-bold text-900 mb-2">
+                {{ "un_authenticated.phone" | translate
+                }}<span class="text-red-500 ml-1">*</span>
+              </label>
+              <input id="phone" formControlName="phoneNumber" type="tel" pInputText class="w-12 mb-3" />
+            </div>
+          </div>
+          <div class="flex justify-content-between align-items-center">
+            <div class="w-full">
+              <label for="email" class="block font-bold text-900 mb-2">
+                {{ "un_authenticated.email" | translate }}
+              </label>
+              <input id="email" formControlName="email" type="email" pInputText class="w-12 mb-3" />
+            </div>
+          </div>
+
+          <div class="flex justify-content-between align-items-center">
+            <div class="w-full">
+              <label for="passwordHash" class="block font-bold text-900 mb-2">
+                {{ "un_authenticated.password" | translate
+                }}<span class="text-red-500 ml-1">*</span>
+              </label>
+              <input id="passwordHash" formControlName="passwordHash" type="password" pInputText class="w-11 mb-3" />
+            </div>
+            <div class="w-full">
+              <label for="confirmpassword" class="block font-bold text-900 mb-2">
+                {{ "un_authenticated.confirm_password" | translate
+                }}<span class="text-red-500 ml-1">*</span>
+              </label>
+              <input id="confirmpassword" formControlName="confirmPassword" type="password" pInputText class="w-full mb-3" />
+            </div>
+          </div>
+
+          <div class="flex justify-content-between align-items-center">
+            <div class="w-10">
+              <label for="dob" class="block font-bold text-900 mb-2">{{
+                "un_authenticated.birthday" | translate
+                }}</label>
+              <p-calendar id="dob" formControlName="dob" [showIcon]="true" inputId="icon" styleClass="w-full mb-3">
+              </p-calendar>
+            </div>
+            <div class="w-1 flex flex-column align-items-center">
+              <label for="gender" class="block font-bold text-900 mb-3">{{
+                "un_authenticated.male" | translate
+                }}</label>
+              <p-inputSwitch styleClass="mb-3" id="gender" formControlName="gender"></p-inputSwitch>
+            </div>
+          </div>
+
+          <div class="flex justify-content-between align-items-center">
+            <div class="w-full">
+              <label for="address" class="block font-bold text-900 mb-2">
+                {{ "un_authenticated.address" | translate }}
+              </label>
+              <input id="address" formControlName="address" type="text" pInputText class="w-12 mb-3" />
+            </div>
+          </div>
+
+          <div class="flex align-items-center justify-content-between mb-4">
+            <div class="flex align-items-center">
+              <p-checkbox id="rememberme" [binary]="true" styleClass="mr-2">
+              </p-checkbox>
+              <label for="rememberme" class="text-900">I agree to the Terms of Use.</label>
+            </div>
+          </div>
+          <div class="flex justify-content-center mb-3">
+            <button pButton [disabled]="formSignUp.invalid" label="Sign up" (click)="onSubmitSignUp()"
+              class="w-10 p-button-success border-round-3xl"></button>
+          </div>
+          <div class="flex justify-content-center">
+              <span class="select-none">
+                {{ "un_authenticated.have_you_an_account" | translate }}
+                <a href="sign-up" class="no-underline cursor-pointer text-red-400">
+                  &nbsp;{{ "un_authenticated.sign_in" | translate }}
+                </a>
+              </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

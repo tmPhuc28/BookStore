@@ -1,0 +1,31 @@
+.layout-wrapper {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.layout-left-menu {
+  position: fixed;
+  width: 300px;
+  height: calc(100vh - 130px);
+  z-index: 9;
+  overflow-y: auto;
+  user-select: none;
+  top: 100px;
+  left: 30px;
+  transition: transform 0.2s, left 0.2s;
+  background-color: var(--surface-overlay);
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+.layout-wrapper .layout-main-container {
+  margin-left: 300px;
+}
+.layout-main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding: 98px 28px 28px 56px;
+}
+.layout-main {
+  flex: 1 1 auto;
+}

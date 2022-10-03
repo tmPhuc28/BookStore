@@ -1,0 +1,92 @@
+<div class="grid">
+  <div class="col-12">
+    <p-card>
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <h3 class="m-0 text-green-600">
+              {{ "order.manage_order" | translate }}
+            </h3>
+          </div>
+        </ng-template>
+      </p-toolbar>
+      <p-table
+        [value]="orderList"
+        [rows]="8"
+        [paginator]="true"
+        responsiveLayout="scroll"
+        [paginator]="true"
+        [showCurrentPageReport]="true"
+      >
+        <ng-template pTemplate="caption">
+          <div
+            class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+          >
+            <span class="block mt-2 md:mt-0 p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                placeholder="Search..."
+                class="w-full sm:w-auto"
+              />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ID {{ "order.order" | translate }}</th>
+            <th pSortableColumn="orderDate">
+              {{ "order.order_date" | translate }}
+              <p-sortIcon field="orderDate"></p-sortIcon>
+            </th>
+            <th>
+              {{ "order.phone" | translate }}
+            </th>
+            <th>{{ "order.address" | translate }}</th>
+            <th pSortableColumn="total">
+              {{ "order.total" | translate
+              }}<p-sortIcon field="total"></p-sortIcon>
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-order>
+          <tr>
+            <td style="width: 14%; min-width: 5rem">
+              {{ order.id }}
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              <p class="hide-text">
+                {{ parseDate(order.createdDate, "DD-MM-YYYY") }}
+              </p>
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              {{ order.phoneReceive }}
+            </td>
+            <td style="width: 14%; min-width: 20rem">
+              <p class="hide-text">
+                {{ order.addressReceive }}
+              </p>
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              {{ order.total | currency: "VND" }}
+            </td>
+            <td>
+              <div class="flex">
+                <a href="admin/order/{{ order.id }}" class="no-underline">
+                  <button
+                    pButton
+                    pRipple
+                    icon="pi pi-search"
+                    class="p-button-rounded p-button-success mr-2"
+                  ></button>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+</div>

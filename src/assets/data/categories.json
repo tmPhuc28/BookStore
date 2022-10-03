@@ -1,0 +1,23 @@
+{
+    "data":[
+        {
+            "id": "1",
+            "categoryName": "Sách tiếng việt"
+
+        },
+        {
+            "id": "2",
+            "categoryName": "Sách tiếng anh"
+
+        },
+        {
+            "id": "3",
+            "categoryName": "Sách giáo khoa"
+
+        },
+        {
+            "id": "4",
+            "categoryName": "Truyện tranh"
+        }
+    ]
+}

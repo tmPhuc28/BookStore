@@ -1,0 +1,55 @@
+<div class="grid">
+  <div class="col-12">
+    <p-card>
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <h3 class="m-0 text-green-600">
+              {{ "category.manage_category" | translate }}
+            </h3>
+          </div>
+        </ng-template>
+      </p-toolbar>
+      <p-table [(first)]="first * getParams.pageSize" [lazy]="true" [value]="categoryList"
+        (onLazyLoad)="loadCategories($event)" [rows]="getParams.pageSize" [totalRecords]="totalElement"
+        [paginator]="totalPage > 1" esponsiveLayout="scroll" [loading]="loading">
+        <ng-template pTemplate="caption">
+          <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
+            <a class="no-underline" href="/admin/category/new">
+              <button pButton pRipple label="New" icon="pi pi-plus"
+                class="p-button-rounded p-button-success mr-2"></button>
+            </a>
+            <span class="block mt-2 md:mt-0 p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input pInputText type="text" placeholder="Search..." class="w-full sm:w-auto" />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ID</th>
+            <th pSortableColumn="categoryName">
+              {{ "category.category_name" | translate }}
+              <p-sortIcon field="categoryName"></p-sortIcon>
+            </th>
+            <th>{{ "category.status" | translate }}</th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-category>
+          <tr>
+            <td>{{ category.id }}</td>
+            <td>{{ category.categoryName }}</td>
+            <td>{{ parseStatus(category.status) | translate }}</td>
+            <td>
+              <div class="flex">
+                <a href="/admin/category/form/{{ category.id }}" pButton pRipple icon="pi pi-pencil"
+                  class="p-button-rounded p-button-warning mr-2 no-underline"></a>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+</div>

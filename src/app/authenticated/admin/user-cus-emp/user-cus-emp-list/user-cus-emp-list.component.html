@@ -1,0 +1,72 @@
+<div class="grid">
+  <div class="col-12">
+    <p-card>
+      <p-toolbar styleClass="mb-4">
+        <ng-template pTemplate="left">
+          <div class="my-2">
+            <h3 class="m-0 text-green-600">
+              {{ "cus-emp.manage_user" | translate }}
+            </h3>
+          </div>
+        </ng-template>
+      </p-toolbar>
+      <p-table [rows]="getParams.pageSize" [value]="usersList" [(first)]="first * getParams.pageSize"
+        [loading]="loading" responsiveLayout="scroll" [lazy]="true" (onLazyLoad)="loadUsers($event)"
+        [totalRecords]="totalRecords" [paginator]="totalPages > 1">
+        <ng-template pTemplate="caption">
+          <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
+            <a class="no-underline" href="/admin/user/new">
+              <button pButton pRipple label="New" icon="pi pi-plus"
+                class="p-button-success p-button-rounded mr-2"></button>
+            </a>
+            <span class="block mt-2 md:mt-0 p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input pInputText type="text" placeholder="Search..." class="w-full sm:w-auto" />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ID</th>
+            <th>
+              {{ "cus-emp.first_name" | translate }}
+            </th>
+            <th>
+              {{ "cus-emp.last_name" | translate }}
+            </th>
+            <th>
+              {{ "cus-emp.status" | translate }}
+            </th>
+            <th>{{ "cus-emp.phone" | translate }}</th>
+            <th>{{ "cus-emp.gender" | translate }}</th>
+            <th>{{ "cus-emp.birthday" | translate }}</th>
+            <th>{{ "cus-emp.address" | translate }}</th>
+            <th></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+          <tr>
+            <td style="width: 14%; max-width: 5rem" class="hide-text-1">{{ user.id }}</td>
+            <td style="width: 14%; min-width: 9rem">{{ user.fistName }}</td>
+            <td style="width: 14%; min-width: 9rem">{{ user.lastName }}</td>
+            <td style="width: 14%; min-width: 8rem">{{ parseStatus(user.status) | translate }}</td>
+            <td style="width: 14%; min-width: 8rem">{{ user.phoneNumber }}</td>
+            <td>{{ user.gender }}</td>
+            <td style="width: 14%; min-width: 7rem">{{ user.dob }}</td>
+            <td style="width: 14%; min-width: 10rem">
+              <p class="hide-text">
+                {{ user.address }}
+              </p>
+            </td>
+            <td>
+              <div class="flex">
+                <a href="/admin/user/form/{{user.id}}" pButton pRipple icon="pi pi-pencil"
+                  class="p-button-rounded p-button-warning mr-2 no-underline"></a>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+</div>

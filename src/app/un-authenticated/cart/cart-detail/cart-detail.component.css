@@ -1,0 +1,19 @@
+.hide-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.order-detail-wrapper {
+  border-top: 1px solid #ddd;
+}
+.table-wrapper {
+  border-collapse: collapse;
+}
+.table-wrapper td,
+.table-wrapper th {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  padding: 10px;
+}

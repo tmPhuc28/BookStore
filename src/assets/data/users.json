@@ -1,0 +1,48 @@
+{
+    "data":[
+        {
+            "id": "1",
+            "firstName": "Nguyễn",
+            "lastName": "Văn A",
+            "phone": "0813399818",
+            "address": "An Phú Đông, Quận 12, TP.HCM",
+            "sex": "Nam",
+            "birthday": "12/12/2001",
+            "idCard": "394858673"
+
+        },
+        {
+            "id": "2",
+            "firstName": "Nguyễn",
+            "lastName": "Văn B",
+            "phone": "0813399818",
+            "address": "An Phú Đông, Quận 12, TP.HCM",
+            "sex": "Nam",
+            "birthday": "12/12/2001",
+            "idCard": "494858673"
+
+        },
+        {
+            "id": "3",
+            "firstName": "Nguyễn",
+            "lastName": "Văn C",
+            "phone": "0813399818",
+            "address": "An Phú Đông, Quận 12, TP.HCM",
+            "sex": "Nam",
+            "birthday": "12/12/2001",
+            "idCard": "594858673"
+
+        },
+        {
+            "id": "4",
+            "firstName": "Nguyễn",
+            "lastName": "Văn D",
+            "phone": "0813399818",
+            "address": "An Phú Đông, Quận 12, TP.HCM",
+            "sex": "Nam",
+            "birthday": "12/12/2001",
+            "idCard": "694858673"
+
+        }
+    ]
+}

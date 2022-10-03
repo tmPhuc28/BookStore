@@ -1,0 +1,112 @@
+{
+	"data": [
+		{
+			"id": "1",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "tieng-viet-lop-1-tap-2-ket-noi.jpg",
+			"price": 1923000,
+			"category": "Sách tiếng việt",
+			"quantity": 35
+		},
+		{
+			"id": "2",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "that-lac-coi-nguoi-tb-2022.jpg",
+			"price": 2900,
+			"category": "Sách tiếng việt",
+			"quantity": 212
+		},
+        {
+			"id": "3",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "tieng-viet-lop-1-tap-2-ket-noi.jpg",
+			"price": 29000,
+			"category": "Sách tiếng việt",
+			"quantity": 12
+		},
+        {
+			"id": "4",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "tieng-viet-lop-1-tap-2-ket-noi.jpg",
+			"price": 29600,
+			"category": "Sách tiếng việt",
+			"quantity": 24
+		},
+        {
+			"id": "5",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "tieng-viet-lop-1-tap-2-ket-noi.jpg",
+			"price": 25000,
+			"category": "Sách tiếng việt",
+			"quantity": 24
+		},
+        {
+			"id": "6",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "tieng-viet-lop-1-tap-2-ket-noi.jpg",
+			"price": 49000,
+			"category": "Sách tiếng việt",
+			"quantity": 8
+		},
+        {
+			"id": "7",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "dao-duc-lop-1-ket-noi.jpg",
+			"price": 29100,
+			"category": "Sách tiếng việt",
+			"quantity": 0
+		},
+        {
+			"id": "8",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "tieng-viet-lop-1-tap-2-ket-noi.jpg",
+			"price": 290300,
+			"category": "Sách tiếng việt",
+			"quantity": 24
+		},
+        {
+			"id": "9",
+			"name": "Sách giáo khoa Tiếng Việt bài tập lớp 1",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "that-lac-coi-nguoi-tb-2022.jpg",
+			"price": 290500,
+			"category": "Sách tiếng việt",
+			"quantity": 24
+		},
+        {
+			"id": "10",
+			"name": "Sách Giáo Khoa Đạo Đức Bài Học Lớp 1 Bộ Kết Nối Tri Thức Với Cuộc Sống Năm 2021",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "tieng-viet-lop-1-tap-2-ket-noi.jpg",
+			"price": 209000,
+			"category": "Sách tiếng việt",
+			"quantity": 24
+		},
+        {
+			"id": "11",
+			"name": "Sách Giáo Khoa Đạo Đức Bài Học Lớp 1 Bộ Kết Nối Tri Thức Với Cuộc Sống Năm 2021",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "dao-duc-lop-1-ket-noi.jpg",
+			"price": 49000,
+			"category": "Sách tiếng việt",
+			"quantity": 24
+		},
+        {
+			"id": "12",
+			"name": "Sách Giáo Khoa Đạo Đức Bài Học Lớp 1 Bộ Kết Nối Tri Thức Với Cuộc Sống Năm 2021",
+			"description": "Bộ sách Giáo khoa lớp 1 - KẾT NỐI TRI THỨC VỚI CUỘC SỐNG được biên soạn cho tất cả học sinh phổ thông trên mọi miền của đất nước, giúp các em hình thành và phát triển những phẩm chất và năng lực cần có đối với người công dân Việt Nam trong thế kỉ XXI. Với thông điệp “Kết nối tri thức với cuộc..",
+			"image": "that-lac-coi-nguoi-tb-2022.jpg",
+			"price": 39000,
+			"category": "Sách tiếng việt",
+			"quantity": 24
+		}
+	]
+}

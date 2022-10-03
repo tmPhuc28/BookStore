@@ -1,0 +1,257 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --while-color: #fff;
+  --black-color: #000;
+  --text-color: #434343;
+  --gray-color: #999;
+  --red-color: #df0c0c;
+  --blue-color: #15c;
+  --green-color: #0aba0d;
+  --bg-color: #6aa84f;
+  --btn-color: #38761d;
+  --bg2-color: #649e4b;
+  --footer-color: #efefef;
+  --color-label: #aaa;
+  --icon-color: #78909c;
+}
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+.wrapper {
+  background-color: var(--while-color);
+  position: relative;
+  min-height: 100vh;
+}
+.grid__user {
+  width: 1200px;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.grid__full-width {
+  width: 100%;
+}
+/* Test */
+.grid__row {
+  display: flex; /* Làm cho nằm trên cùng 1 hàng*/
+  flex-wrap: wrap; /* Tổng độ dài của con dài hơn 1 hàng thì sẽ xuống hàng*/
+  margin-left: -9px;
+  margin-right: -9px;
+}
+/* 2/6 of 12 column*/
+.grid__column-2 {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 16.667%;
+}
+/* column 3/4 of 12 column*/
+.grid__column-3 {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 25%;
+}
+/* column 6/2 of 12 column*/
+.grid__column-6 {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 50%;
+}
+/* column 4/3 of 12 column*/
+.grid__column-4 {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 33.334%;
+}
+
+/* column 8 of 12 column*/
+.grid__column-8 {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 66.666%;
+}
+/* column 2/5 of 10 column*/
+.grid__column-10-2 {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 20%;
+}
+/* column 10 of 12 column*/
+.grid__column-10 {
+  padding-left: 9px;
+  padding-right: 9px;
+  width: 83.333%;
+}
+/* Modal Login Layout */
+.modal {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+.modal__overplay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  background-color: var(--while-color);
+  border-radius: 2px;
+  width: 300px;
+  height: 300px;
+}
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInBtn {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.85;
+  }
+}
+/* btn button style */
+.btn {
+  min-width: 134px;
+  height: 34px;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  padding: 0 12px;
+  cursor: pointer;
+  outline: none;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn:hover {
+  opacity: 0.85;
+  animation: fadeInBtn ease-in 0.2s;
+}
+.btn.btn--primary {
+  color: var(--while-color);
+  background-color: var(--btn-color);
+}
+.btn.btn--disabled {
+  cursor: default;
+  background-color: var(--gray-color);
+  color: #ccc;
+}
+/* Animation func color*/
+@keyframes fadeInFunc {
+  from {
+    color: var(--black-color);
+  }
+
+  to {
+    color: var(--bg-color);
+  }
+}
+
+@keyframes fadeInSign {
+  from {
+    padding: 6px 14px;
+  }
+
+  to {
+    padding: 6px 18px;
+  }
+}
+/* Pagination */
+.pagination {
+}
+.pagination-list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-item {
+  margin: 0 5px;
+}
+.pagination-item--active .pagination-item__link {
+  background-color: var(--bg-color);
+  color: var(--while-color);
+}
+.pagination-item__link {
+  display: block;
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--gray-color);
+  --height: 30px;
+  line-height: var(--height);
+  height: var(--height);
+  text-align: center;
+  min-width: 30px;
+  border-radius: 2px;
+}
+.pagination-item__link:hover {
+  color: var(--btn-color);
+}
+.pagination-item__icon {
+}
+
+/* Scroll top button */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 28px;
+  z-index: 99;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #93c47d;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition: transform linear 0.2s;
+  will-change: transform;
+}
+#myBtn:hover {
+  background-color: var(--btn-color);
+  transform: translateY(-4px);
+}
+.btn-icon {
+  color: var(--while-color);
+}
+.panel {
+  max-height: 0;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height ease-out 0.6s;
+}

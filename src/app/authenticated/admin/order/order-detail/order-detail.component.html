@@ -1,0 +1,176 @@
+<p-card>
+  <p-toolbar styleClass="mb-4">
+    <ng-template pTemplate="left">
+      <div class="my-2">
+        <h3 class="m-0 text-green-900">
+          {{ "order.order_detail" | translate }}
+        </h3>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="right">
+      <div class="my-2">
+        <a class="no-underline" href="/admin/order">
+          <button
+            pButton
+            pRipple
+            icon="pi pi-arrow-right"
+            class="p-button-rounded mr-2"
+          ></button>
+        </a>
+      </div>
+    </ng-template>
+  </p-toolbar>
+  <p-toolbar>
+    <div
+      class="w-full flex flex-wrap justify-content-between align-items-center"
+    >
+      <div class="col" style="width: 20%; min-width: 20rem">
+        <p-card class="shadow-2">
+          <div class="mb-2">
+            <i
+              class="pi pi-circle-fill mr-2 text-blue-700"
+              style="font-size: 10px"
+            ></i>
+            <span class="m-0 text-gray-900 text-base">{{
+              "order.order_info" | translate
+            }}</span>
+          </div>
+          <div class="order-detail-wrapper">
+            <div class="mt-2 text-sm flex justify-content-between">
+              <span>{{ "order.name_receive" | translate }}: </span>
+              <span> {{ order.receiveName }}</span>
+            </div>
+            <div class="mt-2 text-sm flex justify-content-between">
+              <span>{{ "order.order_date" | translate }}: </span>
+              <span class="font-semibold">{{
+                parseDate(order.createdDate, "DD-MM-YYYY")
+              }}</span>
+            </div>
+            <div class="mt-2 text-sm flex justify-content-between">
+              <span>{{ "order.phone_receive" | translate }}: </span>
+              <span> {{ order.phoneReceive }}</span>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- <div class="col" style="width: 20%; min-width: 20rem">
+        <p-card class="shadow-2">
+          <div class="mb-2">
+            <i
+              class="pi pi-user mr-2 text-blue-700"
+              style="font-size: 15px"
+            ></i>
+            <span class="m-0 text-gray-900 text-base">{{
+              "order.customer_info" | translate
+            }}</span>
+          </div>
+
+          <div class="order-detail-wrapper">
+            <div class="mt-2 text-sm flex justify-content-between">
+              <span>{{ "order.full_name" | translate }}: </span>
+              <span class="font-semibold">{{
+                user.fistName + " " + user.lastName
+              }}</span>
+            </div>
+            <div class="mt-2 text-sm flex justify-content-between">
+              <span>{{ "order.phone_number" | translate }}: </span>
+              <span class="font-semibold">{{ user.phone }}</span>
+            </div>
+            <div class="mt-2 text-sm flex justify-content-between">
+              <span>{{ "order.address" | translate }}: </span>
+              <span>{{ user.address }}</span>
+            </div>
+          </div>
+        </p-card>
+      </div> -->
+      <div class="col" style="width: 20%; min-width: 20rem">
+        <p-card class="shadow-2">
+          <div class="mb-2">
+            <i
+              class="pi pi-phone mr-2 text-blue-700"
+              style="font-size: 15px"
+            ></i>
+            <span class="m-0 text-gray-900 text-base">{{
+              "order.shipment_detail" | translate
+            }}</span>
+          </div>
+
+          <div class="order-detail-wrapper">
+            <div class="mt-2 text-sm flex flex-column">
+              <span class="mb-1"
+                >{{ "order.delivery_address" | translate }}:
+              </span>
+              <span class="font-semibold line-height-3">{{
+                order.addressReceive
+              }}</span>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <p-card class="shadow-1 w-full mt-5">
+      <div class="mb-2">
+        <i
+          class="pi pi-shopping-bag mr-2 text-blue-700"
+          style="font-size: 15px"
+        ></i>
+        <span class="m-0 text-gray-900 text-base font-medium">{{
+          "order.order_detail" | translate
+        }}</span>
+      </div>
+      <div style="overflow-x: auto">
+        <table class="w-full table-wrapper">
+          <tr>
+            <th class="text-center text-green-900">
+              {{ "order.image" | translate }}
+            </th>
+            <th class="text-left text-green-800">
+              {{ "order.product_name" | translate }}
+            </th>
+            <th class="text-center text-green-900">
+              {{ "order.quantity" | translate }}
+            </th>
+            <th class="text-center text-green-900">
+              {{ "order.price" | translate }}
+            </th>
+            <th class="text-right text-green-600">
+              {{ "order.total" | translate }}
+            </th>
+          </tr>
+
+          <tr *ngFor="let detail of orderDetails">
+            <td class="text-center">
+              <img
+                src="assets/Img/product/{{ detail.image }}"
+                width="100"
+                class="shadow-4"
+              />
+            </td>
+            <td>{{ detail.name }}</td>
+            <td class="text-center">{{ detail.quantity }}</td>
+            <td class="text-center" style="width: 14%; min-width: 20rem">
+              {{ detail.price | currency: "VND" }}
+            </td>
+            <td class="text-right">
+              {{ detail.price * detail.quantity | currency: "VND" }}
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="grid mt-2">
+        <div class="col-8"></div>
+        <div class="col-4">
+          <div
+            class="text-sm flex justify-content-between align-items-center line-height-4"
+          >
+            <span>{{ "order.total_order_value" | translate }}: </span>
+            <span class="font-semibold text-red-500 text-xl">
+              {{ order.total | currency: "VND" }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </p-card>
+  </p-toolbar>
+</p-card>

@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="grid__user distance">
+    <div class="grid__row">
+      <div class="grid__column-2">
+        <nav class="category">
+          <h3 class="category__heading">
+            <i class="category__heading-icon fa-solid fa-list-ul"></i>
+            {{"product.category"| translate}}
+          </h3>
+          <ul class="category-list">
+            <!--Active: category-item--active -->
+            <li class="category-item category-item--active">
+              <a href="#" class="category-item__link">Hardcover</a>
+
+              <!-- Sub category -->
+              <div class="subcategory">
+                <ul class="subcategory-list">
+                  <li class="subcategory-item">
+                    <a href="#" class="subcategory-item__link">How To Drink Wine</a>
+                  </li>
+                  <li class="subcategory-item">
+                    <a href="#" class="subcategory-item__link">The Information</a>
+                  </li>
+                  <li class="subcategory-item">
+                    <a href="#" class="subcategory-item__link">The Book Of ...</a>
+                  </li>
+                  <li class="subcategory-item">
+                    <a href="#" class="subcategory-item__link">The Bad Guys...</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="category-item">
+              <a href="#" class="category-item__link">Paperback</a>
+            </li>
+            <li class="category-item">
+              <a href="#" class="category-item__link">Textbook</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="grid__column-10">
+        <div class="home-product">
+          <div class="home-product-title-wrapper">
+            <h3 class="home-product-title">{{"product.all_products"| translate}}</h3>
+          </div>
+          <div class="grid__row">
+            <div class="grid__column-10-2" *ngFor="let p of products">
+              <div class="home-product-item">
+                <div class="product-item-img-wrapper">
+                  <a href="/detail/{{p.id}}" class="product-item-img-link">
+                    <img src="assets/Img/product/{{ p.productImage }}" alt="{{ p.productImage }}"
+                      class="product-item__img" />
+                  </a>
+                </div>
+                <div class="product-item-title-price-wrapper">
+                  <h4 class="product-item__name">
+                    {{ p.productName }}
+                  </h4>
+                  <span class="product-item__price">{{ p.price | currency: "VND" }}</span>
+                </div>
+                <div class="product-item-func-wrapper">
+                  <a class="product-item-btn-add-to-cart" href="/detail/{{ p.id }}">
+                    <i class="product-item-icon fa-solid fa-basket-shopping"></i>
+                    {{"product.view_detail"| translate}}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

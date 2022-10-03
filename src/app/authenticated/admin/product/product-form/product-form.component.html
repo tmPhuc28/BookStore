@@ -1,0 +1,73 @@
+<form [formGroup]="formProduct">
+  <div class="grid">
+    <div class="col-12">
+      <p-card>
+        <p-toolbar styleClass="mb-4">
+          <ng-template pTemplate="left">
+            <div class="my-2">
+              <h3 class="m-0 text-green-600">
+                {{ id ? "Edit " : "New " }}Product
+              </h3>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="right">
+            <button (click)="onBack()" pButton pRipple icon="pi pi-arrow-right"
+                    class="p-button-primary p-button-rounded mr-2">
+            </button>
+          </ng-template>
+        </p-toolbar>
+
+        <div class="p-fluid p-formgrid grid">
+          <div class="field col-12 md:col-4">
+            <label>Product name</label>
+            <input pInputText type="text" formControlName="productName" />
+          </div>
+          <div class="field col-12 md:col-4">
+            <label>Quantity</label>
+            <p-inputNumber formControlName="quantity" inputId="minmax" mode="decimal" [min]="1" [max]="99999">
+            </p-inputNumber>
+          </div>
+          <div class="field col-12 md:col-4">
+            <label>Manufacturer</label>
+            <input pInputTextarea rows="4" formControlName="manufacture" />
+          </div>
+          <div class="field col-12 md:col-4">
+            <label>Author</label>
+            <input pInputTextarea formControlName="author" />
+          </div>
+          <div class="field col-12 md:col-4">
+            <label>Category</label>
+            <p-dropdown [options]="categoryList" optionValue="id" formControlName="categoryId"
+              optionLabel="categoryName"></p-dropdown>
+          </div>
+          <div class="field col-12 md:col-4">
+            <label>Price</label>
+            <p-inputNumber formControlName="price" mode="currency" currency="VND" locale="vi-VN">
+            </p-inputNumber>
+          </div>
+          <div class="field col-12 md:col-8">
+            <label>Image</label>
+            <input pInputTextarea type="file" accept="image/*" formControlName="productImage" />
+          </div>
+          <div class="field col-12 md:col-4 flex align-items-center mt-4">
+            <label>Status</label>
+            <p-inputSwitch formControlName="status" class="ml-3"></p-inputSwitch>
+          </div>
+          <div class="field col-12">
+            <label>Description</label>
+            <input pInputTextarea rows="4" formControlName="description" />
+          </div>
+          <div class="w-full flex justify-content-center">
+            <button pButton (click)="onSubmitFormProduct()" [disabled]="formProduct.invalid" pRipple label="{{ id ? 'Update' : 'Save' }}"
+                    class="p-button-primary p-button-rounded w-13rem mr-2">
+            </button>
+            <button (click)="onDelete()" pButton pRipple label="{{ id ? 'Delete'  : 'Cancel' }}"
+                    class="{{ id?'p-button-danger':'p-button-primary' }} w-13rem p-button-rounded mr-2">
+            </button>
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</form>
+<p-confirmDialog header="Confirmation" [rejectVisible]="false" acceptIcon=""></p-confirmDialog>

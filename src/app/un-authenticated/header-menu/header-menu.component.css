@@ -1,0 +1,9 @@
+.icon {
+  padding: 8px 9px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  background-color: var(--icon-color);
+  user-select: none;
+}

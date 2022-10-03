@@ -1,0 +1,35 @@
+{
+    "data":[
+        {
+            "id": "1",
+            "orderDate": "25/07/2022",
+            "address": "APD, District 12, HCMCT",
+            "phone": "0813394774",
+            "total": 30000
+
+        },
+        {
+            "id": "2",
+            "orderDate": "11/02/2022",
+            "address": "An Phu Dong, Quan 12, Thanh Pho Ho Chi Minh",
+            "phone": "0813394774",
+            "total": 140000
+
+        },
+        {
+            "id": "3",
+            "orderDate": "21/01/2022",
+            "address": "APD, District 12, HCMCT",
+            "phone": "0813394774",
+            "total": 1801000
+
+        },
+        {
+            "id": "4",
+            "orderDate": "22/02/2022",
+            "address": "APD, District 12, HCMCT",
+            "phone": "0813394774",
+            "total": 200000
+        }
+    ]
+}
